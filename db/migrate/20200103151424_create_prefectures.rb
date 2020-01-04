@@ -4,7 +4,7 @@ class CreatePrefectures < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :region
       t.string :capital
-      t.boolean :visited
+      t.boolean :visited, default: false
 
       t.timestamps
     end

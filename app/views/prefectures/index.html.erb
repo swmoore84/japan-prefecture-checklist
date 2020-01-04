@@ -1,0 +1,7 @@
+<h1>Prefectures</h1>
+
+<% @prefectures.each do |prefecture| %>
+  <h2><%= prefecture.name %></h2>
+  <%= link_to image_tag("prefectures/#{prefecture.name.downcase}.jpg"), prefecture_path(prefecture) %>
+  <br>
+<% end %>
