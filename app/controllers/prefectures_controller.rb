@@ -1,6 +1,6 @@
 class PrefecturesController < ApplicationController
   def index
-    @prefectures = Prefecture.all
+    @prefectures = Prefecture.all.order(:created_at)
   end
 
   def show

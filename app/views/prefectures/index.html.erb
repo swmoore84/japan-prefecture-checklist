@@ -1,7 +1,11 @@
-<h1>Prefectures</h1>
+<div class="cards">
+  <% @prefectures.each do |prefecture| %>
+    <%= link_to prefecture_path(prefecture) do %>
+      <div class="<%= prefecture.visited ? 'card-visited' : 'card' %>" style="background-image: url(<%= asset_path "prefectures/#{prefecture.name.downcase}.jpg" %>)">
+        <%= prefecture.name%>
+      </div>
+    <% end %>
+  <% end %>
+</div>
 
-<% @prefectures.each do |prefecture| %>
-  <h2><%= prefecture.name %></h2>
-  <%= link_to image_tag("prefectures/#{prefecture.name.downcase}.jpg"), prefecture_path(prefecture) %>
-  <br>
-<% end %>
+
