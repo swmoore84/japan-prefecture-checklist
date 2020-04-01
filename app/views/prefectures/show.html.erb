@@ -1,7 +1,7 @@
 <div class="container">
 
 <div class="header" style="background-image: url(<%= asset_path "prefectures/#{@prefecture.name.downcase}.jpg" %>)">
-  <h1 class="align-middle"><%= @prefecture.name %></h1>
+  <h1><%= @prefecture.name.upcase %></h1>
 </div>
 
 <h3> Capital: <%= @prefecture.capital %></h3>
