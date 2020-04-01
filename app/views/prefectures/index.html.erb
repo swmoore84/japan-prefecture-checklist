@@ -2,7 +2,7 @@
   <% @prefectures.each do |prefecture| %>
     <%= link_to prefecture_path(prefecture) do %>
       <div class="<%= prefecture.visits.count > 0 ? 'card-visited' : 'card' %>" style="background-image: url(<%= asset_path "prefectures/#{prefecture.name.downcase}.jpg" %>)">
-        <%= prefecture.name%>
+        <%= prefecture.name.upcase%>
       </div>
     <% end %>
   <% end %>
