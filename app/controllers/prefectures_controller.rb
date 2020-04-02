@@ -18,7 +18,7 @@ class PrefecturesController < ApplicationController
 
   private
 
-  def refecture_params
+  def prefecture_params
     params.require(:task).permit(:visited)
   end
 end
