@@ -1,6 +1,8 @@
 class PrefecturesController < ApplicationController
   def index
     @prefectures = Prefecture.all.order(:created_at)
+    @prefecture_total = Prefecture.all.count
+    @visited_count = Prefecture.joins(:visits).distinct.count
   end
 
   def show
@@ -14,6 +16,11 @@ class PrefecturesController < ApplicationController
   def update
     @prefecture = Prefecture.find(params[:id])
     @prefecture.update(prefecture_params)
+  end
+
+  def visited_count
+    @visited_count = Prefecture.where(visited: true).count
+    raise
   end
 
   private

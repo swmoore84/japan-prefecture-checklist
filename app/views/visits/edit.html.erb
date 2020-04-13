@@ -3,8 +3,8 @@
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
       <%= simple_form_for [@prefecture, @visit] do |f| %>
-        <%= f.input :place, placeholder: "Where did you visit" %>
-        <%= f.input :description, placeholder: "What did you do there" %>
+        <%= f.input :place, placeholder: "Where did you go in #{@prefecture.name}" %>
+        <%#= f.input :description, placeholder: "What did you do there" %>
         <%#= f.input :date_from, placeholder: "Arrival date" %>
         <%#= f.input :date_to, placeholder: "Departure date" %>
         <%= f.submit "Create visit", class: "btn btn-gradient" %>

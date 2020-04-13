@@ -4,11 +4,12 @@
   <h1><%= @prefecture.name.upcase %></h1>
 </div>
 
-<h3> Capital: <%= @prefecture.capital %></h3>
-<h3> Region: <%= @prefecture.region %></h3>
+<p> Capital: <%= @prefecture.capital %> | Region: <%= @prefecture.region %></p>
 
 <% if @prefecture.visits.count == 0 %>
   <p>You have not visited <%= @prefecture.name %> yet</p>
+<% else %>
+  <h3>Places visited in <%= @prefecture.name %></h3>
 <% end %>
 
 <%= render @prefecture.visits %>
